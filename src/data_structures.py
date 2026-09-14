@@ -29,7 +29,7 @@ def unique_items(items: list) -> list:
            result.append(item)
     return result
 
-    pass
+
 
 
 def word_count(text: str) -> dict:
@@ -51,7 +51,7 @@ def word_count(text: str) -> dict:
         counts[word] = counts.get(word,0) + 1
     return counts
 
-    pass
+
 
 
 def find_common_elements(list1: list, list2: list) -> set:
@@ -69,7 +69,7 @@ def find_common_elements(list1: list, list2: list) -> set:
     """
     return set(list1) & set(list2)
 
-    pass
+    
 
 
 def get_average(numbers: list) -> float:

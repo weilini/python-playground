@@ -2,7 +2,7 @@
 
 import pytest
 
-from src.collections import (
+from src.data_structures import (
     find_common_elements,
     get_average,
     unique_items,
