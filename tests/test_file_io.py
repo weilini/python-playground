@@ -59,5 +59,5 @@ class TestSafeDivide:
         assert safe_divide(7, 2) == 3.5
 
     def test_divide_by_zero_raises(self):
-        with pytest.raises(ValueError, match="cannot divide by zero"):
+        with pytest.raises(ValueError, match="Cannot divide by zero"):
             safe_divide(10, 0)
