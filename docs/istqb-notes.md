@@ -140,3 +140,98 @@ Any artifact created during testing:
 - **Defect / Bug** → flaw in the code or document
 - **Failure** → software deviates from expected behavior
 - **Root Cause** → underlying reason for the defect
+
+---
+
+## Chapter 2 — Testing Throughout the SDLC
+
+### What is SDLC?
+
+**SDLC = Software Development Life Cycle**
+
+Phases:
+1. Requirements — What should it do?
+2. Design — How will we build it?
+3. Development — Write the code
+4. Testing — Does it work?
+5. Deployment — Release to users
+6. Maintenance — Fix bugs, add features
+
+### SDLC Models
+
+| Model | Characteristics | Testing |
+|-------|-----------------|---------|
+| **Waterfall** | Sequential | Testing after development |
+| **V-Model** | Sequential + testing planned | Each dev phase has matching test phase |
+| **Agile** | Iterative, sprints | Testing in every sprint |
+| **DevOps** | Continuous cycle | Testing is continuous (CI/CD) |
+
+### Test Levels
+
+| Level | Tests | Who | Example |
+|-------|-------|-----|---------|
+| Component/Unit | Functions, classes | Developers | `test_greet()` |
+| Integration | Components together | Devs + QA | Login → database |
+| System | Whole system | QA | Full user journey |
+| Acceptance | User requirements | Users/QA | Client sign-off |
+
+### Test Types
+
+**By what they test:**
+- Functional — features
+- Non-functional — performance, security, usability
+
+**By how they're designed:**
+- Black-box — no knowledge of internals
+- White-box — know the code
+- Gray-box — some knowledge
+
+### Confirmation vs Regression Testing
+
+| Type | Purpose |
+|------|---------|
+| Confirmation | Verify the specific bug is fixed |
+| Regression | Verify nothing else broke |
+
+**Both are needed after any change.**
+
+### Maintenance Testing
+
+Testing changes to already-released software.
+
+When: bug fixes, new features, environment changes, data migrations.
+
+Two aspects:
+1. Impact analysis — what might break?
+2. Regression testing — re-test affected areas
+
+### Key Terms (Chapter 2)
+
+| Term | Definition |
+|------|------------|
+| SDLC | Software Development Life Cycle |
+| V-Model | Sequential model with testing planned alongside development |
+| Agile | Iterative development with sprints |
+| DevOps | Continuous development + operations |
+| Test Level | Unit, Integration, System, Acceptance |
+| Functional Testing | Tests what the system does |
+| Non-functional Testing | Tests how the system performs |
+| Black-box Testing | Testing without knowing internals |
+| White-box Testing | Testing with knowledge of code |
+| Regression Testing | Re-testing to ensure changes didn't break anything |
+| Confirmation Testing | Re-testing a specific bug fix |
+| Maintenance Testing | Testing changes to released software |
+
+Quiz Yourself
+
+Answer these 5 questions:
+
+    What are the 4 SDLC models?  -  Waterfall, V-Model, Agile, DevOps
+
+    What are the 4 test levels (smallest to largest)?  - Unit, Integration, System, Acceptance
+
+    What's the difference between Black-box and White-box testing?  - Black-box: no knowledge of internals; White-box: know the code
+
+    What's the difference between Confirmation and Regression testing?  - Confirmation: verify a specific bug fix; Regression: verify nothing else broke
+
+    When does Maintenance testing happen?  - When changes are made to released software (bug fixes, new features, environment changes)
