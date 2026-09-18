@@ -235,3 +235,131 @@ Answer these 5 questions:
     What's the difference between Confirmation and Regression testing?  - Confirmation: verify a specific bug fix; Regression: verify nothing else broke
 
     When does Maintenance testing happen?  - When changes are made to released software (bug fixes, new features, environment changes)
+
+---
+
+## Chapter 3 — Static Testing
+
+### What is Static Testing?
+
+Testing **without executing the code**.
+
+| | Static | Dynamic |
+|---|--------|---------|
+| Runs code? | No | Yes |
+| When | Before/during coding | After code written |
+| Finds | Defects in docs, code, requirements | Defects in behavior |
+| Examples | Reviews, static analysis | Unit tests, manual testing |
+
+**I've done static testing** — using ruff, black, mypy.
+
+### Why Static Testing Matters
+
+- Find defects early (before code runs)
+- Cheaper to fix
+- Covers non-code artifacts (requirements, design)
+- Finds different bugs than dynamic testing
+
+### Types of Static Testing
+
+1. **Reviews** — humans examine artifacts
+2. **Static Analysis** — tools analyze code
+
+### Reviews — 4 Types
+
+| Type | Formality | Leader | Who |
+|------|-----------|--------|-----|
+| Informal Review | Low | Anyone | 1–2 people |
+| Walkthrough | Medium | Author | Author + peers |
+| Technical Review | Medium-High | Trained moderator | Peers + experts |
+| Inspection | High | Trained moderator | Formal team |
+
+**In practice:** Pull request reviews, peer code reviews.
+
+### Review Process (5 Activities)
+
+1. Planning — what, who, when
+2. Initiation — distribute materials
+3. Individual Preparation — reviewers study
+4. Review Meeting — team discusses
+5. Rework & Follow-up — fix and verify
+
+Most reviews skip steps; formal inspections follow all 5.
+
+### Roles in Reviews
+
+| Role | Responsibility |
+|------|----------------|
+| Author | Created the artifact |
+| Moderator | Runs the meeting |
+| Reviewer | Finds defects |
+| Scribe | Records findings |
+| Manager | Decides what to review |
+
+### Static Analysis (Tool-Based)
+
+Tools analyze code without running it.
+
+| Tool | Finds |
+|------|-------|
+| Ruff | Style, potential bugs |
+| mypy | Type errors |
+| Bandit | Security vulnerabilities |
+| Black | Formatting |
+
+**Tools I use:** Ruff, Black, mypy.
+
+### What Static Analysis Finds
+
+- Unused imports
+- Undefined variables
+- Type mismatches
+- Security issues
+- Complexity warnings
+
+### What Static Analysis Can't Find
+
+- Runtime errors
+- Logic errors (code works but wrong)
+- Performance issues
+- UI issues
+
+**Static complements dynamic — use both.**
+
+### Static vs Dynamic Testing
+
+| | Static | Dynamic |
+|---|--------|---------|
+| Finds | Code smells, style, potential bugs | Behavior, runtime errors |
+| When | Before running | After running |
+| Cost | Cheaper | More expensive |
+| Tools | Linters, type checkers | Test frameworks |
+| Covers | Code, docs, requirements | Executable software |
+
+### Key Terms (Chapter 3)
+
+| Term | Definition |
+|------|------------|
+| Static Testing | Testing without executing code |
+| Review | Human examination of an artifact |
+| Static Analysis | Tool-based code analysis |
+| Walkthrough | Author-led review |
+| Technical Review | Peer review with technical experts |
+| Inspection | Formal, structured review |
+| Linter | Tool that finds code issues |
+| Type Checker | Tool that verifies types |
+
+
+Quiz Myself 
+
+Answer these 5 questions:
+
+    What's the difference between static and dynamic testing?- Static: no code execution; Dynamic: runs the code
+
+    Name 3 types of reviews. - Informal review, Walkthrough, Technical review, Inspection
+
+    What's the difference between a walkthrough and an inspection?  - Walkthrough: author-led, informal; Inspection: formal, moderator-led
+
+    Name 3 static analysis tools you've used.  - Ruff, Black, mypy (or Bandit, ESLint, etc.)
+
+    What can static analysis NOT find?  - Runtime errors, logic errors, performance issues, UI issues
