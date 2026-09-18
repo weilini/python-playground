@@ -342,3 +342,197 @@ D. Security issues
 
 ## Questions to Review:
 - [ ] Note topics I need to re-read
+
+---
+
+## Week 2 — Day 3: Chapters 5–6 Review
+
+### Chapter 5 — Quick Recall
+
+**Test Plan contents:**
+- Scope, Objectives, Approach, Resources, Schedule, Risks, Entry/Exit criteria
+
+**Risk-Based Testing:**
+Risk = Probability × Impact
+
+| Probability | Impact | Risk | Priority |
+|-------------|--------|------|----------|
+| High | High | Critical | Test first |
+| High | Low | Medium | Test |
+| Low | High | Medium | Test |
+| Low | Low | Low | Skip or light |
+
+**Monitoring vs Control:**
+- Monitoring = track progress
+- Control = adjust plan
+
+**Defect Lifecycle:**
+New → Assigned → In Progress → Fixed → Ready for Retest → Closed
+                                            ↓
+                                        Reopened
+
+**Defect Report includes:**
+- ID, Title
+- Severity (technical impact)
+- Priority (business urgency)
+- Steps to reproduce
+- Expected vs Actual
+- Environment
+- Attachments
+
+**Test Estimation Techniques:**
+1. Expert judgment
+2. Ratio-based (e.g., 30% of dev time)
+3. Work breakdown
+
+**Roles:**
+| Role | Responsibility |
+|------|----------------|
+| Test Manager | Owns plan, reports status |
+| Test Lead | Leads team, designs tests |
+| Tester | Executes, reports bugs |
+| Developer | Fixes bugs, unit tests |
+| Product Owner | Prioritizes features/bugs |
+
+---
+
+### Chapter 6 — Quick Recall
+
+**Tool Categories (9):**
+1. Test Management — Jira, TestRail
+2. Defect Management — Jira, Bugzilla
+3. Static Analysis — Ruff, mypy, SonarQube
+4. Test Design — test generators
+5. Test Execution — pytest, Selenium, Playwright
+6. Coverage — pytest-cov, JaCoCo
+7. Performance — JMeter, Locust, k6
+8. CI/CD — GitHub Actions, Jenkins
+9. Monitoring — Prometheus, Grafana
+
+**Automation Benefits:**
+- Speed (1000 tests in seconds)
+- Repeatability
+- Coverage
+- Cost savings
+- Regression testing
+- CI/CD integration
+
+**Automation Risks:**
+- High initial cost
+- Maintenance burden
+- False confidence
+- Wrong tests automated
+- Tool complexity
+- Not suitable for everything
+
+**When NOT to automate:**
+- Exploratory testing
+- UX testing
+- One-time tests
+- Unstable features
+
+**Testing Pyramid:**
+
+
+**Tool Selection Criteria:**
+Fit, cost, learning curve, integration, support, scalability, compatibility
+
+---
+
+## Practice Questions — Chapters 5–6
+
+### Q1: What does Risk = Probability × Impact help with? b
+
+A. Deciding which tests to automate
+B. Prioritizing testing by risk
+C. Estimating test effort
+D. Monitoring test progress
+
+**Answer:** B
+
+---
+
+### Q2: What is the difference between monitoring and control? b
+
+A. They are the same
+B. Monitoring tracks progress; Control adjusts the plan
+C. Monitoring is for developers; Control is for testers
+D. Monitoring is manual; Control is automated
+
+**Answer:** B
+
+---
+
+### Q3: What is the FIRST state in the defect lifecycle? c
+
+A. Assigned
+B. In Progress
+C. New
+D. Fixed
+
+**Answer:** C
+
+---
+
+### Q4: Which is NOT a benefit of test automation? c
+
+A. Speed
+B. Repeatability
+C. Low initial cost
+D. Regression testing
+
+**Answer:** C
+
+---
+
+### Q5: According to the testing pyramid, which type of test should you have the MOST of? c
+
+A. UI tests
+B. Integration tests
+C. Unit tests
+D. Performance tests
+
+**Answer:** C
+
+---
+
+### Q6: What is the difference between severity and priority? b
+
+A. They are the same
+B. Severity = technical impact; Priority = business urgency
+C. Severity = business urgency; Priority = technical impact
+D. Severity is for bugs; Priority is for features
+
+**Answer:** B
+
+---
+
+### Q7: Which test estimation technique is based on development time?  b
+
+A. Expert judgment
+B. Ratio-based
+C. Work breakdown
+D. Risk-based
+
+**Answer:** B
+
+---
+
+### Q8: Which tool would you use to test an API?  c
+
+A. Selenium
+B. Playwright
+C. Postman
+D. JMeter
+
+**Answer:** C
+
+---
+
+## My Score: _8/8
+
+## Weak Areas Identified:
+- [ ] List any topics I got wrong
+
+## Questions to Review:
+- [ ] Note topics I need to re-read
