@@ -537,3 +537,132 @@ Answer these 5 questions:
     What does a state transition diagram show?  - States and transitions between them
 
     What's the difference between statement coverage and branch coverage? - Statement: % of code lines executed; Branch: % of if/else branches taken
+
+    ---
+
+## Chapter 5 — Managing the Test Activities
+
+### Test Planning
+
+A test plan describes how testing will be done.
+
+**Contents:**
+- Scope: what's tested, what's not
+- Objectives: what we want to achieve
+- Approach: manual, automated, both
+- Resources: who, what tools
+- Schedule: when, how long
+- Entry criteria: when to start
+- Exit criteria: when done
+- Risks: what could go wrong
+
+Written by Test Manager / QA Lead. Updated during testing.
+
+### Risk-Based Testing
+
+Focus testing on high-risk areas.
+
+**Risk = Probability × Impact**
+
+| Probability | Impact | Risk | Priority |
+|-------------|--------|------|----------|
+| High | High | Critical | Test first, thoroughly |
+| High | Low | Medium | Test |
+| Low | High | Medium | Test |
+| Low | Low | Low | Test lightly |
+
+**Example — Banking app:**
+- Transfer money: High risk → test thoroughly
+- View balance: Medium → test
+- Theme color: Low → test lightly
+
+### Test Monitoring and Control
+
+**Monitoring** = track progress
+**Control** = adjust plan
+
+**Monitor:**
+- Test cases run (50/100)
+- Passed (45/50)
+- Defects found (12)
+- Coverage (75%)
+- Time spent (3/5 days)
+
+**Control:**
+- Behind schedule → cut low-priority tests
+- Too many bugs → extend testing
+- Critical bug → pause, fix, retest
+
+### Defect Management
+
+**Lifecycle:**
+New → Assigned → In Progress → Fixed → Ready for Retest → Closed
+                                            ↓
+                                        Reopened
+
+**Defect report:**
+- ID, Title
+- Severity, Priority
+- Steps to reproduce
+- Expected vs Actual
+- Environment
+- Attachments
+
+**Good report = specific + reproducible + complete**
+
+### Test Documentation
+
+| Document | Purpose |
+|----------|---------|
+| Test Plan | How testing will be done |
+| Test Case | Individual test steps |
+| Test Script | Automated test code |
+| Test Log | Record of execution |
+| Defect Report | Bug description |
+| Test Summary Report | Final results |
+
+### Test Estimation
+
+**3 techniques:**
+1. Expert judgment — ask experienced testers
+2. Ratio-based — e.g., 30% of dev time
+3. Work breakdown — estimate tasks, sum
+
+**Example:** Dev 10 days → testing = 3 days (30%)
+
+### Roles in Test Management
+
+| Role | Responsibility |
+|------|----------------|
+| Test Manager | Owns plan, reports status |
+| Test Lead | Leads team, designs tests |
+| Tester | Executes, reports bugs |
+| Developer | Fixes bugs, unit tests |
+| Product Owner | Prioritizes features/bugs |
+
+### Key Terms (Chapter 5)
+
+| Term | Definition |
+|------|------------|
+| Test Plan | Document describing how to test |
+| Risk-based Testing | Testing prioritized by risk |
+| Test Monitoring | Tracking testing progress |
+| Test Control | Adjusting plan based on progress |
+| Defect Report | Description of a bug |
+| Entry Criteria | Conditions to start testing |
+| Exit Criteria | Conditions to stop testing |
+| Test Estimation | Predicting testing effort |
+
+Quiz Myself 
+
+Answer these 5 questions:
+
+    What is Risk = Probability × Impact used for? - Risk-based testing — prioritize high-risk areas
+
+    What's the difference between monitoring and control? - Monitoring: track progress; Control: adjust plan based on progress
+
+    What should a good defect report include? - ID, title, severity, priority, steps, expected, actual, environment
+
+    Name 3 test estimation techniques. - Expert judgment, Ratio-based, Work breakdown
+
+    What's the difference between entry criteria and exit criteria? - Entry: when to start testing; Exit: when testing is done
