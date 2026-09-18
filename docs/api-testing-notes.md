@@ -305,3 +305,41 @@ D. It doesn't have a status code
 - 500 = Server Error
 
 **Rule:** 2xx = success. 4xx = client error. 5xx = server error.
+
+
+## My First curl API Tests
+
+### Test 1 — Get a Post (200 OK)
+
+Command:
+curl -i https://jsonplaceholder.typicode.com/posts/1
+
+Response:
+HTTP/2 200
+content-type: application/json
+{ "userId": 1, "id": 1, "title": "..." }
+
+### Test 2 — Get Invalid Post (404)
+
+Command:
+curl -i https://jsonplaceholder.typicode.com/posts/9999
+
+Response:
+HTTP/2 404
+{}
+
+### Test 3 — Get Status Code Only
+
+Command:
+curl -o /dev/null -s -w "%{http_code}\n" https://jsonplaceholder.typicode.com/posts/1
+
+Response:
+200
+
+### Test 4 — Get All Posts
+
+Command:
+curl https://jsonplaceholder.typicode.com/posts
+
+Response:
+[100 posts]
