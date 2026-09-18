@@ -666,3 +666,128 @@ Answer these 5 questions:
     Name 3 test estimation techniques. - Expert judgment, Ratio-based, Work breakdown
 
     What's the difference between entry criteria and exit criteria? - Entry: when to start testing; Exit: when testing is done
+
+    ---
+
+## Chapter 6 — Test Tools
+
+### Why Test Tools Matter
+
+Tools support testing activities:
+- Test management
+- Test execution
+- Defect tracking
+- Coverage measurement
+
+**Key principle:** Tools support skill, they don't replace it.
+
+### Types of Test Tools
+
+| Category | What it does | Examples |
+|----------|--------------|----------|
+| Test Management | Plan, track, report | Jira, TestRail, Zephyr |
+| Defect Management | Track bugs | Jira, Bugzilla |
+| Static Analysis | Analyze code | Ruff, mypy, SonarQube |
+| Test Design | Create test cases | Test generators |
+| Test Execution | Run tests | pytest, Selenium, Playwright |
+| Coverage | Measure coverage | pytest-cov, JaCoCo |
+| Performance | Test speed/load | JMeter, Locust, k6 |
+| CI/CD | Automate build/test/deploy | GitHub Actions, Jenkins |
+| Monitoring | Watch system health | Prometheus, Grafana |
+
+**Tools I already use:** pytest, pytest-cov, Ruff, mypy, GitHub, Jira
+
+### Test Automation Benefits
+
+- Speed: 1000 tests in seconds
+- Repeatability: same result every time
+- Coverage: test more scenarios
+- Cost savings: no manual effort after writing
+- Regression testing: re-run after every change
+- CI/CD integration: tests on every commit
+
+**Example:**
+- Manual: 100 tests × 5 min = 8 hours
+- Automated: 100 tests × 0.1 sec = 10 seconds
+
+### Test Automation Risks
+
+- High initial cost (writing tests takes time)
+- Maintenance burden (tests break with code changes)
+- False confidence (passing tests ≠ no bugs)
+- Wrong tests automated (unstable features = wasted effort)
+- Tool complexity (learning curve)
+- Not suitable for everything (UX, exploratory)
+
+**When NOT to automate:**
+- Exploratory testing
+- UX testing
+- One-time tests
+- Unstable features
+
+**Rule:** Automate repeatable tests, not everything.
+
+### Tool Selection Criteria
+
+| Criterion | Questions |
+|-----------|-----------|
+| Fit | Does it solve our problem? |
+| Cost | Free? Paid? |
+| Learning curve | Can team learn quickly? |
+| Integration | Works with our stack? |
+| Support | Community? Commercial? |
+| Scalability | Works as we grow? |
+| Compatibility | OS, browsers, languages? |
+
+**Example:** Need UI testing → Playwright (Python-friendly, free, active community)
+
+### Test Automation in Practice
+
+**Testing pyramid:**
+
+
+**Most tests should be unit tests.**
+
+**My project:**
+- ✅ Many unit tests (117)
+- ❌ No integration tests
+- ❌ No API tests
+- ❌ No UI tests (yet)
+
+### Tools to Learn
+
+| Tool type | Tools |
+|-----------|-------|
+| Test management | Jira, TestRail |
+| API testing | Postman, REST Assured |
+| UI automation | Playwright, Selenium |
+| Performance | JMeter, k6, Locust |
+| CI/CD | GitHub Actions, Jenkins |
+
+**I know:** Jira, pytest, GitHub Actions (soon)
+**I'll learn:** Postman (Week 3), Playwright (Stage 4)
+
+### Key Terms (Chapter 6)
+
+| Term | Definition |
+|------|------------|
+| Test Tool | Software supporting testing activities |
+| Test Automation | Using tools to run tests automatically |
+| Testing Pyramid | Model: many unit tests, fewer UI tests |
+| CI/CD | Continuous Integration / Continuous Deployment |
+| Static Analysis Tool | Tool that analyzes code without running it |
+| Coverage Tool | Tool that measures test coverage |
+
+Quiz Myself
+
+Answer these 5 questions:
+
+    Name 3 types of test tools. - Any 3: Test management, defect management, static analysis, test execution, coverage, performance, CI/CD, monitoring
+
+    What are 3 benefits of test automation? - Any 3: Speed, repeatability, coverage, cost savings, regression testing, CI/CD integration
+
+    What are 3 risks of test automation? - Any 3: High initial cost, maintenance burden, false confidence, wrong tests automated, tool complexity, not suitable for everything
+
+    What does the testing pyramid show?  -  Many unit tests (bottom), fewer integration tests (middle), fewest UI tests (top)
+
+    What criteria help choose a test tool? - Fit, cost, learning curve, integration, support, scalability, compatibility
