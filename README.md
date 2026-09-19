@@ -23,3 +23,4 @@ source .venv/bin/activate
 
 # Install dev dependencies
 pip install -e ".[dev]"
+

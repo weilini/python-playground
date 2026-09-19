@@ -343,3 +343,71 @@ curl https://jsonplaceholder.typicode.com/posts
 
 Response:
 [100 posts]
+
+STEP 3 — Quick Self-Quiz
+
+Answer these questions without looking at your notes:
+
+    GET vs POST — what's the difference?  - Get reads data; POST creates data
+
+    PUT vs PATCH — what's the difference? - PUT replaces the entire resource; PATCH modifies part of it
+
+    Status 200 vs 201 vs 204 — what does each mean? - 200 OK (success); 201 Created (POST success); 204 No Content (DELETE success)
+
+    Status 401 vs 403 — what's the difference? - 401 Unauthorized (not logged in); 403 Forbidden (logged in but no permission)
+
+    Idempotency — which HTTP methods are idempotent? - GET, PUT, DELETE — POST is not idempotent
+
+    Postman vs Python requests — when do you use each? - Postman: manual exploration and testing; Python: automation and CI/CD
+ 
+    requests.get() vs requests.post() — what's the difference? - get() sends a GET request; post() sends a POST request (with body)
+
+    What does response.json() do? - It parses the response body into a Python dict
+
+    ---
+
+## Week 3 Summary — What I Learned
+
+### Tools I used
+- **curl** — command line API testing
+- **Postman** — GUI-based API testing
+- **Python requests** — code-based API testing
+- **pytest** — automated test framework
+
+### Skills I gained
+1. **API fundamentals** — REST, HTTP methods, status codes, JSON
+2. **Manual testing** — curl and Postman for exploring APIs
+3. **Postman collections** — organized test suites with 19 assertions
+4. **Python API testing** — `requests` library with 8 pytest tests
+5. **Test assertions** — status codes, response time, JSON fields
+
+### Key concepts
+| Concept | What it means |
+|---------|---------------|
+| REST | Rules for building APIs |
+| HTTP methods | GET (read), POST (create), PUT (replace), PATCH (modify), DELETE (remove) |
+| Status codes | 2xx success, 4xx client error, 5xx server error |
+| Idempotency | Doing it twice = same result (GET, PUT, DELETE) |
+| JSON | Data format most APIs use |
+| Authentication | API keys, Bearer tokens |
+
+### Tools comparison
+| Task | curl | Postman | Python |
+|------|------|---------|--------|
+| Quick test | ✅ | ✅ | ⚠️ |
+| Manual exploration | ✅ | ✅ | ❌ |
+| Automated tests | ❌ | ⚠️ | ✅ |
+| CI/CD integration | ⚠️ | ⚠️ | ✅ |
+| Version control | ❌ | JSON export | ✅ |
+
+### My artifacts
+- `qa/postman-collection.json` — 19 Postman assertions
+- `src/api_client.py` — Python API client (4 functions)
+- `tests/test_api.py` — 8 pytest API tests
+- `docs/api-testing-notes.md` — this file
+
+### What I want to learn next
+- API authentication testing
+- POST/PUT/DELETE Python tests (I only did GET and POST)
+- API mocking for tests that don't need a real API
+- Integrating API tests into CI/CD
