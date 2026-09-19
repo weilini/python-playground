@@ -536,3 +536,158 @@ D. JMeter
 
 ## Questions to Review:
 - [ ] Note topics I need to re-read
+
+---
+
+## Week 4 — Chapters 3-4 Deep Review
+
+### Chapter 3 — Static Testing
+
+**4 Review Types:**
+| Type | Formality | Leader |
+|------|-----------|--------|
+| Informal | Low | Anyone |
+| Walkthrough | Medium | Author |
+| Technical Review | Medium-High | Trained moderator |
+| Inspection | High | Trained moderator |
+
+**5 Activities:** Planning → Initiation → Preparation → Meeting → Rework
+
+**5 Roles:** Author, Moderator, Reviewer, Scribe, Manager
+
+**Static Analysis Tools:** Ruff, mypy, Bandit
+
+**Can find:** unused imports, type mismatches, security issues
+**Cannot find:** runtime errors, logic errors, performance issues
+
+### Chapter 4 — Test Design
+
+**EP:** Divide inputs; test one value per partition
+**BVA:** Test values at boundaries
+**Decision Table:** 2^n rules (n = conditions)
+**State Transition:** Test state changes
+**Use Case:** Test end-to-end user journeys
+
+**Coverage:** Statement, Branch, Decision, Path
+
+---
+
+## Practice Questions — Chapters 3-4 (Deep Review)
+
+### Q1: Who leads a walkthrough?
+
+A. Trained moderator
+B. Author
+C. Scribe
+D. Manager
+
+**Answer:** B
+
+---
+
+### Q2: Which review type is the most formal?
+
+A. Informal Review
+B. Walkthrough
+C. Technical Review
+D. Inspection
+
+**Answer:** D
+
+---
+
+### Q3: What is the FIRST activity in the review process?
+
+A. Preparation
+B. Review Meeting
+C. Planning
+D. Rework
+
+**Answer:** C
+
+---
+
+### Q4: What is the role of a scribe?
+
+A. Creates the artifact
+B. Runs the review meeting
+C. Records findings
+D. Provides resources
+
+**Answer:** C
+
+---
+
+### Q5: What can static analysis NOT find?
+
+A. Unused imports
+B. Type mismatches
+C. Runtime errors
+D. Security issues
+
+**Answer:** C
+
+---
+
+### Q6: For age (valid 18-65), which are BVA values?
+
+A. 30
+B. 18 only
+C. 17, 18, 19, 64, 65, 66
+D. 0, 50, 100
+
+**Answer:** C
+
+---
+
+### Q7: How many rules in a decision table with 4 conditions?
+
+A. 4
+B. 8
+C. 12
+D. 16
+
+**Answer:** D (2^4 = 16)
+
+---
+
+### Q8: Which technique for an ATM machine?
+
+A. Equivalence Partitioning
+B. Decision Table
+C. State Transition
+D. Use Case
+
+**Answer:** C
+
+---
+
+### Q9: What does branch coverage measure?
+
+A. % of code lines executed
+B. % of if/else branches taken
+C. % of decision outcomes tested
+D. % of code paths tested
+
+**Answer:** B
+
+---
+
+### Q10: What is the key difference between EP and BVA?
+
+A. EP tests boundaries; BVA tests partitions
+B. EP tests one value per partition; BVA tests at boundaries
+C. They are the same
+D. EP is manual; BVA is automated
+
+**Answer:** B
+
+---
+
+## My Score: __/10
+
+## Weak Areas Identified:
+- [ ] [任何做错的题]
+
+## Questions to Review:
+- [ ] [需要重读的章节]
