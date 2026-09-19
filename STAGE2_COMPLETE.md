@@ -124,10 +124,3 @@
 
 ---
 
-## Reflection
-
-Over the past 10 days, I went from configuring a Python environment to building a real, working CLI application.
-
-I can now honestly say I write Python.
-
-**Ready for Stage 2.5.** 🚀

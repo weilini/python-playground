@@ -161,9 +161,3 @@ a real, working CLI application. I wrote:
 - Real tests
 - Real documentation
 - Real Git history
-
-I can now honestly say I write Python. Not expert-level — but real, working code
-with tests, error handling, and professional structure.
-
-**Ready for Stage 2.5.** 🚀
-EOF
