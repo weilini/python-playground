@@ -4,9 +4,11 @@ import pytest
 
 from src.api_client import (
     create_post,
+    delete_post,
     get_all_posts,
     get_post,
     get_post_status,
+    update_post,
 )
 
 
@@ -40,7 +42,7 @@ class TestGetAllPosts:
 
     def test_each_post_has_required_fields(self):
         posts = get_all_posts()
-        for post in posts[:5]:  # check first 5
+        for post in posts[:5]:
             assert "id" in post
             assert "title" in post
             assert "userId" in post
@@ -58,4 +60,20 @@ class TestCreatePost:
     def test_create_post_assigns_id(self):
         new_post = create_post("Another Test", "Body", 2)
         assert "id" in new_post
-        assert new_post["id"] == 101  # JSONPlaceholder always returns 101
+        assert new_post["id"] == 101
+
+
+class TestUpdatePost:
+    """Tests for updating a post."""
+
+    def test_update_post_returns_updated_data(self):
+        updated = update_post(1, "Updated Title", "Updated Body", 1)
+        assert updated["title"] == "Updated Title"
+        assert updated["body"] == "Updated Body"
+
+
+class TestDeletePost:
+    """Tests for deleting a post."""
+
+    def test_delete_post_returns_200(self):
+        assert delete_post(1) == 200
