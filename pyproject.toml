@@ -4,7 +4,8 @@ version = "0.1.0"
 description = "Personal Python learning repo"
 authors = [{ name = "Lini Wei", email = "wei_lini@hotmail.com" }]
 requires-python = ">=3.11"
-dependencies = []
+dependencies = [
+"requests>=2.31.0",]
 
 [project.optional-dependencies]
 dev = [
