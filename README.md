@@ -2,7 +2,6 @@
 
 ![Tests](https://github.com/weilini/python-playground/actions/workflows/tests.yml/badge.svg)
 
-# Python Playground
 
 A personal learning repository for Python fundamentals, exercises, and mini-projects.
 
