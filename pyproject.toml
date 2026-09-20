@@ -16,6 +16,8 @@ dev = [
     "ruff>=0.5",
     "mypy>=1.10",
     "pre-commit>=3.7",
+    "playwright>=1.45",
+    "pytest-playwright>=0.5",
 ]
 
 [build-system]
