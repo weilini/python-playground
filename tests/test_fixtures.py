@@ -5,7 +5,6 @@ Fixtures are functions that provide test data or setup.
 
 import pytest
 
-
 # ============================================================
 # Simple fixture — returns a value
 # ============================================================

@@ -25,7 +25,7 @@ class TodoList:
         if not self.path.exists():
             return
         try:
-            with open(self.path, "r") as f:
+            with open(self.path) as f:
                 data = json.load(f)
             self.tasks = [Task.from_dict(item) for item in data]
         except (json.JSONDecodeError, KeyError):

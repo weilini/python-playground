@@ -8,8 +8,7 @@ from unittest.mock import Mock, patch
 
 import pytest
 
-from src.api_client import get_post, get_all_posts, create_post, get_post_status
-
+from src.api_client import create_post, get_all_posts, get_post, get_post_status
 
 # ============================================================
 # Example 1 — Basic mock of requests.get

@@ -33,7 +33,7 @@ def read_text(filename: str) -> str:
     Raises:
         FileNotFoundError: If the file does not exist.
     """
-    with open(filename, "r") as f:
+    with open(filename) as f:
         return f.read()
 
 
@@ -61,7 +61,7 @@ def load_json(filename: str) -> dict:
         FileNotFoundError: If the file does not exist.
         json.JSONDecodeError: If the file contains invalid JSON.
     """
-    with open(filename, "r") as f:
+    with open(filename) as f:
         return json.load(f)
 
 
