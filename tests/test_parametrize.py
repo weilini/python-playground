@@ -17,13 +17,16 @@ def add(a: int, b: int) -> int:
     return a + b
 
 
-@pytest.mark.parametrize("a, b, expected", [
-    (1, 2, 3),
-    (0, 0, 0),
-    (-1, 1, 0),
-    (100, 200, 300),
-    (-5, -5, -10),
-])
+@pytest.mark.parametrize(
+    "a, b, expected",
+    [
+        (1, 2, 3),
+        (0, 0, 0),
+        (-1, 1, 0),
+        (100, 200, 300),
+        (-5, -5, -10),
+    ],
+)
 def test_add(a, b, expected):
     assert add(a, b) == expected
 
@@ -39,15 +42,18 @@ def is_palindrome(text: str) -> bool:
     return cleaned == cleaned[::-1]
 
 
-@pytest.mark.parametrize("text, expected", [
-    ("racecar", True),
-    ("A man a plan a canal Panama", True),
-    ("Was it a car or a cat I saw", True),
-    ("hello", False),
-    ("python", False),
-    ("", True),
-    ("a", True),
-])
+@pytest.mark.parametrize(
+    "text, expected",
+    [
+        ("racecar", True),
+        ("A man a plan a canal Panama", True),
+        ("Was it a car or a cat I saw", True),
+        ("hello", False),
+        ("python", False),
+        ("", True),
+        ("a", True),
+    ],
+)
 def test_is_palindrome(text, expected):
     assert is_palindrome(text) == expected
 
@@ -64,21 +70,27 @@ def safe_divide(a: float, b: float) -> float:
     return a / b
 
 
-@pytest.mark.parametrize("a, b, expected", [
-    (10, 2, 5.0),
-    (7, 2, 3.5),
-    (-10, 2, -5.0),
-    (0, 5, 0.0),
-])
+@pytest.mark.parametrize(
+    "a, b, expected",
+    [
+        (10, 2, 5.0),
+        (7, 2, 3.5),
+        (-10, 2, -5.0),
+        (0, 5, 0.0),
+    ],
+)
 def test_safe_divide_valid(a, b, expected):
     assert safe_divide(a, b) == expected
 
 
-@pytest.mark.parametrize("a, b", [
-    (10, 0),
-    (0, 0),
-    (-5, 0),
-])
+@pytest.mark.parametrize(
+    "a, b",
+    [
+        (10, 0),
+        (0, 0),
+        (-5, 0),
+    ],
+)
 def test_safe_divide_by_zero_raises(a, b):
     with pytest.raises(ValueError, match="cannot divide by zero"):
         safe_divide(a, b)
@@ -89,14 +101,25 @@ def test_safe_divide_by_zero_raises(a, b):
 # ============================================================
 
 
-@pytest.mark.parametrize("number, expected", [
-    (2, True),
-    (3, False),
-    (0, True),
-    (-4, True),
-    (-3, False),
-    pytest.param(100, True, id="one_hundred"),
-], ids=["even_small", "odd_small", "zero", "even_negative", "odd_negative", "one_hundred"])
+@pytest.mark.parametrize(
+    "number, expected",
+    [
+        (2, True),
+        (3, False),
+        (0, True),
+        (-4, True),
+        (-3, False),
+        pytest.param(100, True, id="one_hundred"),
+    ],
+    ids=[
+        "even_small",
+        "odd_small",
+        "zero",
+        "even_negative",
+        "odd_negative",
+        "one_hundred",
+    ],
+)
 def test_is_even(number, expected):
     assert (number % 2 == 0) == expected
 
@@ -112,12 +135,15 @@ def multiplier():
     return lambda x: x * 2
 
 
-@pytest.mark.parametrize("input_value, expected", [
-    (1, 2),
-    (5, 10),
-    (-3, -6),
-    (0, 0),
-])
+@pytest.mark.parametrize(
+    "input_value, expected",
+    [
+        (1, 2),
+        (5, 10),
+        (-3, -6),
+        (0, 0),
+    ],
+)
 def test_multiplier(multiplier, input_value, expected):
     assert multiplier(input_value) == expected
 

@@ -139,7 +139,7 @@ D. Test Execution
 **Answer:** B
 
 ---
-  
+
 ### Q7: What is a defect?  B
 
 A. A human mistake

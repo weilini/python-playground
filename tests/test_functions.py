@@ -1,7 +1,5 @@
 """Tests for src/functions.py."""
 
-import pytest
-
 from src.functions import (
     apply_twice,
     build_profile,
@@ -28,16 +26,17 @@ class TestSumAll:
     """Tests for sum_all()."""
 
     def test_multiple_numbers(self):
-        assert sum_all(1,2,3) == 6
+        assert sum_all(1, 2, 3) == 6
 
     def test_no_numbers(self):
         assert sum_all() == 0
 
     def test_negative_numbers(self):
-        assert sum_all(-1,-2,-3) == -6
+        assert sum_all(-1, -2, -3) == -6
 
     def test_mixed_numbers(self):
-        assert sum_all(-1,0,1) == 0
+        assert sum_all(-1, 0, 1) == 0
+
 
 class TestBuildProfile:
     """Tests for build_profile()."""

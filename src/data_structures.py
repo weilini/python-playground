@@ -24,12 +24,10 @@ def unique_items(items: list) -> list:
     seen = set()
     result = []
     for item in items:
-       if item not in seen : 
-           seen.add(item)
-           result.append(item)
+        if item not in seen:
+            seen.add(item)
+            result.append(item)
     return result
-
-
 
 
 def word_count(text: str) -> dict:
@@ -46,12 +44,10 @@ def word_count(text: str) -> dict:
     Example:
         word_count("the cat the dog") -> {"the": 2, "cat": 1, "dog": 1}
     """
-    counts = {}
+    counts: dict[str, int] = {}
     for word in text.lower().split():
-        counts[word] = counts.get(word,0) + 1
+        counts[word] = counts.get(word, 0) + 1
     return counts
-
-
 
 
 def find_common_elements(list1: list, list2: list) -> set:
@@ -68,8 +64,6 @@ def find_common_elements(list1: list, list2: list) -> set:
         find_common_elements([1, 2, 3], [2, 3, 4]) -> {2, 3}
     """
     return set(list1) & set(list2)
-
-    
 
 
 def get_average(numbers: list) -> float:
@@ -96,7 +90,7 @@ def get_average(numbers: list) -> float:
 
 if __name__ == "__main__":
     # Manual test — run this file to see output
-    print(unique_items([1, 2, 2, 3, 1]))                # [1, 2, 3]
-    print(word_count("the cat the dog"))                 # {'the': 2, 'cat': 1, 'dog': 1}
-    print(find_common_elements([1, 2, 3], [2, 3, 4]))    # {2, 3}
-    print(get_average([10, 20, 30]))                     # 20.0
+    print(unique_items([1, 2, 2, 3, 1]))  # [1, 2, 3]
+    print(word_count("the cat the dog"))  # {'the': 2, 'cat': 1, 'dog': 1}
+    print(find_common_elements([1, 2, 3], [2, 3, 4]))  # {2, 3}
+    print(get_average([10, 20, 30]))  # 20.0

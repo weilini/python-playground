@@ -1,7 +1,5 @@
 """Tests for src/todo/."""
 
-import json
-
 import pytest
 
 from src.todo.task import Task

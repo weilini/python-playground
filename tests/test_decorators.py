@@ -1,7 +1,4 @@
-
 """Tests for src/decorators.py."""
-
-import pytest
 
 from src.decorators import count_calls, log_calls, shout
 

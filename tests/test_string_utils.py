@@ -1,7 +1,5 @@
 """Tests for src/utils/string_utils.py."""
 
-import pytest
-
 from src.utils.string_utils import capitalize_words, count_words, reverse
 
 

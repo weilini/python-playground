@@ -17,7 +17,7 @@ def write_text(filename: str, content: str) -> None:
         filename: Path to the file to write.
         content: Text content to write.
     """
-    with open(filename,"w") as f:
+    with open(filename, "w") as f:
         f.write(content)
 
 
@@ -33,7 +33,7 @@ def read_text(filename: str) -> str:
     Raises:
         FileNotFoundError: If the file does not exist.
     """
-    with open(filename,"r") as f:
+    with open(filename, "r") as f:
         return f.read()
 
 
@@ -78,7 +78,7 @@ def safe_divide(a: float, b: float) -> float:
     Raises:
         ValueError: If b is zero.
     """
-    with open("division.log", "a") as log_file:
+    with open("division.log", "a"):
         if b == 0:
             raise ValueError("Cannot divide by zero.")
         return a / b

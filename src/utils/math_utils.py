@@ -23,8 +23,8 @@ def is_even(n: int) -> bool:
 
 
 if __name__ == "__main__":
-    print(add(2, 3))          # 5
-    print(subtract(10, 4))    # 6
-    print(multiply(3, 4))     # 12
-    print(is_even(4))         # True
-    print(is_even(7))         # False
+    print(add(2, 3))  # 5
+    print(subtract(10, 4))  # 6
+    print(multiply(3, 4))  # 12
+    print(is_even(4))  # True
+    print(is_even(7))  # False

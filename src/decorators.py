@@ -20,10 +20,12 @@ def shout(func):
 
         greet()  # "HELLO"
     """
+
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         result = func(*args, **kwargs)
         return result.upper()
+
     return wrapper
 
 
@@ -39,12 +41,14 @@ def log_calls(func):
         # Prints: Calling add(2, 3)
         #         add returned 5
     """
+
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         print(f"Calling {func.__name__}({args}, {kwargs})")
         result = func(*args, **kwargs)
         print(f"{func.__name__} returned {result}")
         return result
+
     return wrapper
 
 
@@ -53,20 +57,23 @@ def count_calls(func):
 
     The count is stored on the wrapper as .call_count.
     """
+
     @functools.wraps(func)
     def wrapper(*args, **kwargs):
         wrapper.call_count += 1
         return func(*args, **kwargs)
+
     wrapper.call_count = 0
     return wrapper
 
 
 if __name__ == "__main__":
+
     @shout
     def greet():
         return "hello"
 
-    print(greet())          # "HELLO"
+    print(greet())  # "HELLO"
 
     @log_calls
     def add(a, b):

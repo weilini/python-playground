@@ -1,7 +1,5 @@
 """Tests for src/utils/math_utils.py."""
 
-import pytest
-
 from src.utils.math_utils import add, is_even, multiply, subtract
 
 

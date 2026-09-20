@@ -49,7 +49,7 @@ class TestCheckingAccount:
         c = CheckingAccount("Lini", 100.0, overdraft_limit=50.0)
         c.withdraw(150.0)  # Allowed: 100 + 50 = 150
         assert c.balance == -50.0
-    
+
     def test_withdraw_beyond_overdraft_raises(self):
         c = CheckingAccount("Lini", 100.0, overdraft_limit=50.0)
         with pytest.raises(ValueError, match="Insufficient funds"):

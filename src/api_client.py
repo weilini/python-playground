@@ -60,6 +60,8 @@ if __name__ == "__main__":
     print("\n=== Get All Posts ===")
     print(f"Total posts: {len(get_all_posts())}")
     print("\n=== Update Post ===")
-    print(f"Updated title: {update_post(1, 'Updated Title', 'Updated Body', 1)['title']}")
+    print(
+        f"Updated title: {update_post(1, 'Updated Title', 'Updated Body', 1)['title']}"
+    )
     print("\n=== Delete Post ===")
     print(f"Delete status: {delete_post(1)}")

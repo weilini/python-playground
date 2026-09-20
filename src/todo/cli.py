@@ -32,7 +32,7 @@ def cmd_add(todo: TodoList, args: list[str]) -> None:
 def cmd_list(todo: TodoList) -> None:
     tasks = todo.all()
     if not tasks:
-        print("No tasks. Add one with: add \"Task title\"")
+        print('No tasks. Add one with: add "Task title"')
         return
     for i, task in enumerate(tasks, start=1):
         print(f"{i}. {task}")

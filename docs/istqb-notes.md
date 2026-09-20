@@ -116,7 +116,7 @@ Any artifact created during testing:
 ## Exam Prep Notes
 
 - **Testing vs Debugging:** Testing finds defects, debugging fixes them
-- **7 principles:** presence not absence, exhaustive impossible, early testing,defect clustering, pesticide paradox,context-dependent,absence-of-errors fallacy. 
+- **7 principles:** presence not absence, exhaustive impossible, early testing,defect clustering, pesticide paradox,context-dependent,absence-of-errors fallacy.
 - **Testing process:** 7 activitises - test planing, test monitoring&control. test analysis, test design, test implementation, test execution, test completion
 - **Testware:** all artifacts from resting: test plan, test case, teste data, test script, defect report
 
@@ -350,7 +350,7 @@ Tools analyze code without running it.
 | Type Checker | Tool that verifies types |
 
 
-Quiz Myself 
+Quiz Myself
 
 Answer these 5 questions:
 
@@ -653,7 +653,7 @@ New → Assigned → In Progress → Fixed → Ready for Retest → Closed
 | Exit Criteria | Conditions to stop testing |
 | Test Estimation | Predicting testing effort |
 
-Quiz Myself 
+Quiz Myself
 
 Answer these 5 questions:
 

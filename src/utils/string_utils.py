@@ -24,7 +24,8 @@ def reverse(text: str) -> str:
     """
     return text[::-1]
 
+
 if __name__ == "__main__":
-    print(capitalize_words("hello world"))   # Hello World
-    print(count_words("hello world foo"))    # 3
-    print(reverse("hello"))                  # olleh
+    print(capitalize_words("hello world"))  # Hello World
+    print(count_words("hello world foo"))  # 3
+    print(reverse("hello"))  # olleh

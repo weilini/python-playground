@@ -59,7 +59,7 @@ def greet_user(name: str, city: str) -> str:
 
 if __name__ == "__main__":
     # Manual test — run this file directly to see output
-    print(celsius_to_fahrenheit(0))      # 32.0
-    print(celsius_to_fahrenheit(100))    # 212.0
-    print(calculate_age(1990, 2026))     # 36
-    print(greet_user("Lini", "Cork"))    # Hello, Lini from Cork!
+    print(celsius_to_fahrenheit(0))  # 32.0
+    print(celsius_to_fahrenheit(100))  # 212.0
+    print(calculate_age(1990, 2026))  # 36
+    print(greet_user("Lini", "Cork"))  # Hello, Lini from Cork!

@@ -39,20 +39,21 @@ class SavingsAccount(BankAccount):
     def __init__(self, owner: str, balance: float = 0.0, interest_rate: float = 0.02):
         super().__init__(owner, balance)
         self.interest_rate = interest_rate
-        
 
     def add_interest(self) -> None:
         """Add interest to the balance.
 
         Formula: balance *= (1 + interest_rate)
         """
-        self.balance *= (1 + self.interest_rate)
+        self.balance *= 1 + self.interest_rate
 
 
 class CheckingAccount(BankAccount):
     """A checking account with overdraft protection."""
 
-    def __init__(self, owner: str, balance: float = 0.0, overdraft_limit: float = 100.0):
+    def __init__(
+        self, owner: str, balance: float = 0.0, overdraft_limit: float = 100.0
+    ):
         super().__init__(owner, balance)
         self.overdraft_limit = overdraft_limit
 
@@ -73,14 +74,14 @@ class CheckingAccount(BankAccount):
 if __name__ == "__main__":
     # Test BankAccount
     a = BankAccount("Lini", 100.0)
-    print(a)                          # Lini's account: €100.00
+    print(a)  # Lini's account: €100.00
 
     # Test SavingsAccount
     s = SavingsAccount("Lini", 100.0, 0.05)
     s.add_interest()
-    print(s.balance)                  # 105.0
+    print(s.balance)  # 105.0
 
     # Test CheckingAccount
     c = CheckingAccount("Lini", 50.0, 100.0)
-    c.withdraw(120.0)                 # Allowed: 50 + 100 = 150
-    print(c.balance)                  # -70.0
+    c.withdraw(120.0)  # Allowed: 50 + 100 = 150
+    print(c.balance)  # -70.0

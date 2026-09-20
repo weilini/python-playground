@@ -43,4 +43,4 @@ if __name__ == "__main__":
         file = Path(tmpdir) / "test.txt"
         append_line(str(file), "First line")
         append_line(str(file), "Second line")
-        print(count_lines(str(file)))    # 2
+        print(count_lines(str(file)))  # 2

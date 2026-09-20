@@ -1,7 +1,5 @@
 """Tests for src/utils/file_utils.py."""
 
-import pytest
-
 from src.utils.file_utils import append_line, count_lines
 
 

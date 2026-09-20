@@ -1,7 +1,5 @@
 """Tests for src/api_client.py — JSONPlaceholder API tests."""
 
-import pytest
-
 from src.api_client import (
     create_post,
     delete_post,

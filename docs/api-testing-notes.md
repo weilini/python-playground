@@ -242,7 +242,7 @@ D. None
 ### Q2: What's the difference between PUT and PATCH?  - b
 
 A. They're the same
-B. PUT replaces full resource; PATCH modifies part 
+B. PUT replaces full resource; PATCH modifies part
 C. PUT is for create; PATCH is for update
 D. PUT is safe; PATCH is unsafe
 
@@ -359,7 +359,7 @@ Answer these questions without looking at your notes:
     Idempotency — which HTTP methods are idempotent? - GET, PUT, DELETE — POST is not idempotent
 
     Postman vs Python requests — when do you use each? - Postman: manual exploration and testing; Python: automation and CI/CD
- 
+
     requests.get() vs requests.post() — what's the difference? - get() sends a GET request; post() sends a POST request (with body)
 
     What does response.json() do? - It parses the response body into a Python dict
