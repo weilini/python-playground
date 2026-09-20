@@ -16,7 +16,7 @@ def test_python_org_homepage_loads(page: Page) -> None:
 
 def test_python_org_has_donate_link(page: Page) -> None:
     """Test that the Donate button exists on python.org."""
-    page.goto("https://www.python.org/")
+    page.goto("https://www.python.org/", wait_until="domcontentloaded", timeout=60_000)
 
     # Use exact=True to match "Donate" but not "Donate to the PSF"
     donate_link = page.get_by_role("link", name="Donate", exact=True)
