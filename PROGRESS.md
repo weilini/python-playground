@@ -166,3 +166,42 @@ After Playwright sprint:
 - pytest: 9.1.1
 - Playwright: pytest-playwright 0.9.0, Chromium
 - Virtual env: .venv (always active)
+
+---
+
+## Parallel Tracks (all phases)
+
+These run alongside the main stages — small, ongoing habits.
+
+### DSA (LeetCode)
+
+- Cadence: 3-5 problems/week, 45 min each
+- Method: try yourself (15 min) -> hints (5 min) -> solution (10 min) -> rewrite from scratch (10 min) -> explain out loud (5 min)
+- Order: follow NeetCode 150 (arrays -> two pointers -> sliding window -> stacks -> binary search -> linked lists -> trees -> DP)
+- Location: dsa-practice/<pattern>/<problem>.py with tests + time/space complexity in docstring
+- Review: Sunday, re-solve one older problem from memory
+- Milestones: 50 problems (Nov 2026), 100 (Jan 2027), 150 (Mar 2027)
+
+### Career Networking
+
+- 1 LinkedIn message/week to a QA/SWE person in Cork
+- 1 coffee chat/month with someone in the industry
+- 1 Cork tech meetup/quarter (Python, DevOps, QA)
+- English writing polish: cover letters, PR descriptions, docs
+
+### ISTQB CTFL
+
+- Exam: November 2026 (voucher purchased)
+- Weak areas to review: Ch 3 (Static Testing), Ch 4 (Test Design)
+- Target: 65%+ (currently 67-72% on mocks)
+
+### Trevor Plan (mentor + potential referral)
+
+Trevor Desmond — Sr SWE Manager, Acuity Cork. 30+ years in IT dev, built teams.
+Former manager, warm relationship.
+
+- Now: send career-advice message (not asking for job yet)
+- +1 month: update with progress
+- +2 months: update + ask about his team
+- +3 months: apply or ask for referral
+- +6 months: follow up if no role yet
