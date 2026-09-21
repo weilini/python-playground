@@ -195,13 +195,10 @@ These run alongside the main stages — small, ongoing habits.
 - Weak areas to review: Ch 3 (Static Testing), Ch 4 (Test Design)
 - Target: 65%+ (currently 67-72% on mocks)
 
-### Trevor Plan (mentor + potential referral)
+### Mentor Plan
 
-Trevor Desmond — Sr SWE Manager, Acuity Cork. 30+ years in IT dev, built teams.
-Former manager, warm relationship.
-
-- Now: send career-advice message (not asking for job yet)
-- +1 month: update with progress
-- +2 months: update + ask about his team
-- +3 months: apply or ask for referral
-- +6 months: follow up if no role yet
+- Identify 1-2 senior engineers in Cork willing to advise on career direction
+- Reconnect with former colleagues and managers — ask for perspective, not favours
+- Update them every 4-6 weeks with progress
+- Ask about their team's needs only after establishing an ongoing relationship
+- Goal: warm introductions when roles open, not cold applications
