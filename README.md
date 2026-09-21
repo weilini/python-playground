@@ -26,7 +26,7 @@ I'm not just learning — I'm building. Every module has tests. Every change goe
 | Module | What I learned |
 |--------|----------------|
 | `basics.py` | Variables, types, f-strings, functions |
-| `collections.py` | Lists, dicts, sets, comprehensions |
+| `data_structures.py` | Lists, dicts, sets, comprehensions |
 | `functions.py` | Default args, `*args`, `**kwargs` |
 | `file_io.py` | File handling, JSON, error handling |
 | `oop_basics.py` | Classes, objects, `self` |
@@ -36,11 +36,21 @@ I'm not just learning — I'm building. Every module has tests. Every change goe
 | `todo/` | A CLI To-Do app with JSON persistence |
 | `utils/` | Shared utilities (math, string, file) |
 
+### `pages/` — Page Object Model
+
+- `base_page.py` — shared navigation and URL/title helpers
+- `login_page.py` — LoginPage (login, logout, assertions)
+- `checkboxes_page.py` — CheckboxesPage
+- `dropdown_page.py` — DropdownPage
+
+
 ### `tests/` — Automated tests
 
-- **179 tests** across 14 test files
+- **179 unit/API tests** across 15 test files
 - Uses **pytest**, **fixtures**, **parametrize**, **mocking**
-- **61% code coverage**
+- **61% code coverage** (unit tests)
+- `tests/e2e/` — 52 Playwright UI tests (5 files)
+- **Total: ~231 tests**
 
 ### `docs/` — Learning notes
 
@@ -48,6 +58,9 @@ I'm not just learning — I'm building. Every module has tests. Every change goe
 - `istqb-notes.md` — ISTQB CTFL study notes (6 chapters)
 - `api-testing-notes.md` — REST API testing
 - `mock-exam-1.md` — Mock exam results
+- `playwright-notes.md` — Playwright assertion patterns (Day 4)
+- `playwright-pom.md` — Page Object Model (Day 5)
+- `playwright-fixtures.md` — pytest fixtures + conftest (Day 6)
 
 ### `qa/` — QA artifacts
 
