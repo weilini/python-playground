@@ -34,23 +34,23 @@ target-version = "py311"
 
 [tool.ruff.lint]
 select = [
-    "E",   # pycodestyle errors
-    "W",   # pycodestyle warnings
-    "F",   # pyflakes
-    "I",   # isort
-    "N",   # pep8-naming
-    "UP",  # pyupgrade
-    "B",   # flake8-bugbear
-    "C4",  # flake8-comprehensions
-    "SIM", # flake8-simplify
+    "E",
+    "W",
+    "F",
+    "I",
+    "N",
+    "UP",
+    "B",
+    "C4",
+    "SIM",
 ]
 ignore = [
-    "E501",  # line too long (black 会处理)
+    "E501",
 ]
 
 [tool.ruff.lint.per-file-ignores]
-"tests/*" = ["S101"]  # 测试里允许 assert
-"__init__.py" = ["F401"]  # __init__.py 允许未使用 import
+"tests/*" = ["S101"]
+"__init__.py" = ["F401"]
 
 [tool.ruff.lint.isort]
 known-first-party = ["src"]
@@ -59,6 +59,8 @@ known-first-party = ["src"]
 quote-style = "double"
 indent-style = "space"
 
+
 [tool.pytest.ini_options]
-testpaths = ["tests"]
+testpaths = ["tests", "dsa_practice"]
+python_files = ["test_*.py", "*_test.py", "*.py"]
 addopts = "-v --cov=src --cov-report=term-missing"
