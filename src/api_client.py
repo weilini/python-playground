@@ -50,6 +50,47 @@ def delete_post(post_id: int) -> int:
     return response.status_code
 
 
+# ---------------------------------------------------------------------------
+# Authenticated requests
+# ---------------------------------------------------------------------------
+
+
+def get_protected_resource(token: str) -> dict:
+    """Fetch a protected resource using Bearer token auth.
+
+    Sends: Authorization: Bearer <token>
+    """
+    headers = {"Authorization": f"Bearer {token}"}
+    response = requests.get(f"{BASE_URL}/posts/1", headers=headers, timeout=10)
+    response.raise_for_status()
+    return response.json()
+
+
+def get_with_basic_auth(username: str, password: str) -> dict:
+    """Fetch using HTTP Basic Auth.
+
+    `requests` handles the base64 encoding automatically.
+    """
+    response = requests.get(
+        f"{BASE_URL}/posts/1",
+        auth=(username, password),
+        timeout=10,
+    )
+    response.raise_for_status()
+    return response.json()
+
+
+def get_with_custom_headers(headers: dict) -> dict:
+    """Fetch with arbitrary custom headers (e.g. X-API-Key, User-Agent)."""
+    response = requests.get(
+        f"{BASE_URL}/posts/1",
+        headers=headers,
+        timeout=10,
+    )
+    response.raise_for_status()
+    return response.json()
+
+
 if __name__ == "__main__":
     print("=== Get Post 1 ===")
     print(f"Title: {get_post(1)['title'][:50]}...")
