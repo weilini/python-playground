@@ -162,6 +162,29 @@ class APIClient:
         """Close the underlying session."""
         self.session.close()
 
+        # ---------------------------------------------------------------------------
+
+
+# JSON Schemas for API responses
+# ---------------------------------------------------------------------------
+
+POST_SCHEMA = {
+    "type": "object",
+    "required": ["id", "title", "body", "userId"],
+    "properties": {
+        "id": {"type": "integer"},
+        "title": {"type": "string"},
+        "body": {"type": "string"},
+        "userId": {"type": "integer"},
+    },
+    "additionalProperties": False,
+}
+
+POST_LIST_SCHEMA = {
+    "type": "array",
+    "items": POST_SCHEMA,
+}
+
 
 if __name__ == "__main__":
     print("=== Get Post 1 ===")
