@@ -1,13 +1,15 @@
 """pytest fixtures for Playwright e2e tests.
 
-Fixtures here are automatically available to any test file inside
-tests/e2e/ (and subfolders), without needing an import.
+E2E tests are skipped by default because they depend on an external
+site (the-internet.herokuapp.com) that is unreliable from CI and from
+some networks.
 
-Also skips all e2e tests if the target site is unreachable (e.g. in CI).
+To run e2e tests locally, set: RUN_E2E=1 pytest tests/e2e/
 """
 
+import os
+
 import pytest
-import requests
 from playwright.sync_api import Page
 
 from pages import CheckboxesPage, DropdownPage, LoginPage
@@ -36,31 +38,17 @@ def dropdown_page(page: Page) -> DropdownPage:
 
 
 # ---------------------------------------------------------------------------
-# Skip all e2e tests if the test site is unreachable (e.g. in CI)
+# Skip e2e tests unless RUN_E2E=1 is explicitly set
 # ---------------------------------------------------------------------------
 
-_TARGET_URL = "https://the-internet.herokuapp.com/"
-
-
-def _site_is_reachable(url: str, timeout: float = 5.0) -> bool:
-    """Return True if we get any non-5xx HTTP response from the URL."""
-    try:
-        response = requests.get(url, timeout=timeout)
-        return response.status_code < 500
-    except Exception:
-        return False
-
-
-_SITE_UP = _site_is_reachable(_TARGET_URL)
+_RUN_E2E = os.getenv("RUN_E2E") == "1"
 
 
 def pytest_collection_modifyitems(config: pytest.Config, items: list) -> None:
-    """If the e2e test site is unreachable, skip all e2e tests."""
-    if _SITE_UP:
+    """Skip e2e tests unless RUN_E2E=1."""
+    if _RUN_E2E:
         return
-    skip_marker = pytest.mark.skip(
-        reason=f"{_TARGET_URL} unreachable - skipping e2e tests"
-    )
+    skip_marker = pytest.mark.skip(reason="e2e tests disabled (set RUN_E2E=1 to run)")
     for item in items:
         if "e2e" in str(item.fspath):
             item.add_marker(skip_marker)
