@@ -30,7 +30,7 @@ def get_post_status(post_id: int) -> int:
 
 def create_post(title: str, body: str, user_id: int) -> dict:
     """Create a new post."""
-    payload = {"title": title, "body": body, "userId": user_id}
+    payload: dict[str, str | int] = {"title": title, "body": body, "userId": user_id}
     response = requests.post(f"{BASE_URL}/posts", json=payload, timeout=10)
     response.raise_for_status()
     return response.json()
@@ -38,7 +38,12 @@ def create_post(title: str, body: str, user_id: int) -> dict:
 
 def update_post(post_id: int, title: str, body: str, user_id: int) -> dict:
     """Update an existing post (PUT)."""
-    payload = {"id": post_id, "title": title, "body": body, "userId": user_id}
+    payload: dict[str, str | int] = {
+        "id": post_id,
+        "title": title,
+        "body": body,
+        "userId": user_id,
+    }
     response = requests.put(f"{BASE_URL}/posts/{post_id}", json=payload, timeout=10)
     response.raise_for_status()
     return response.json()
@@ -89,6 +94,58 @@ def get_with_custom_headers(headers: dict) -> dict:
     )
     response.raise_for_status()
     return response.json()
+
+
+# ---------------------------------------------------------------------------
+# Session-based client (more efficient for multiple requests)
+# ---------------------------------------------------------------------------
+
+
+class APIClient:
+    """API client using a shared session.
+
+    Benefits:
+    - Connection reuse (one TCP/TLS handshake, not per request)
+    - Shared headers (e.g. auth token, User-Agent)
+    - Easier to configure (timeout, base URL)
+    """
+
+    def __init__(
+        self,
+        base_url: str = BASE_URL,
+        token: str | None = None,
+        timeout: int = 10,
+    ) -> None:
+        self.base_url = base_url
+        self.timeout = timeout
+        self.session = requests.Session()
+        if token:
+            self.session.headers["Authorization"] = f"Bearer {token}"
+
+    def get(self, path: str) -> dict:
+        """GET a path (e.g. '/posts/1') and return parsed JSON."""
+        response = self.session.get(f"{self.base_url}{path}", timeout=self.timeout)
+        response.raise_for_status()
+        return response.json()
+
+    def get_status(self, path: str) -> int:
+        """GET a path and return only the status code."""
+        response = self.session.get(f"{self.base_url}{path}", timeout=self.timeout)
+        return response.status_code
+
+    def post(self, path: str, payload: dict) -> dict:
+        """POST a JSON payload and return the response JSON."""
+        response = self.session.post(
+            f"{self.base_url}{path}",
+            json=payload,
+            timeout=self.timeout,
+        )
+        response.raise_for_status()
+        return response.json()
+
+    def close(self) -> None:
+        """Close the underlying session."""
+        self.session.close()
 
 
 if __name__ == "__main__":
