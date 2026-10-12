@@ -46,11 +46,12 @@ I'm not just learning — I'm building. Every module has tests. Every change goe
 
 ### `tests/` — Automated tests
 
-- **179 unit/API tests** across 15 test files
+- **244 passing tests** (52 e2e skipped by default)
 - Uses **pytest**, **fixtures**, **parametrize**, **mocking**
-- **61% code coverage** (unit tests)
-- `tests/e2e/` — 52 Playwright UI tests (5 files)
-- **Total: ~231 tests**
+- **64% code coverage** (unit + API tests)
+- `tests/api/` — 55 API tests using `responses` for mocking (7 files)
+- `tests/e2e/` — 52 Playwright UI tests (skipped in CI; run locally with `RUN_E2E=1`)
+- **Total: 296 tests collected**
 
 ### `docs/` — Learning notes
 
@@ -75,7 +76,7 @@ I'm not just learning — I'm building. Every module has tests. Every change goe
 ## Tech Stack
 
 - **Language:** Python 3.12
-- **Testing:** pytest, pytest-cov
+- **Testing:** pytest, pytest-cov, responses (mock), jsonschema (validation)
 - **Code quality:** Black, Ruff, mypy, pre-commit
 - **CI/CD:** GitHub Actions (test on Python 3.11 + 3.12)
 - **Tools:** Git, Linux (Ubuntu), VS Code, Postman
