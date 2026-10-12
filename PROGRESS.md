@@ -19,7 +19,7 @@
 - Stage 2: Python fundamentals — COMPLETE (117 tests, tag v0.2.0)
 - Stage 2.5: QA foundations — PARTIAL (W1-4 done; ISTQB review deferred to Nov)
 - Stage 3: Testing & tooling — COMPLETE (179 tests, tag v0.3.0)
-- Stage 4: QA Automation + DSA — IN PROGRESS (Playwright sprint complete; API/Selenium/load/DSA remaining)
+- Stage 4: QA Automation + DSA — IN PROGRESS (Playwright + API sprint complete; Selenium/load/DSA remaining)
 - Stage 5: Portfolio projects — TODO
 - Stage 6: CV + interview prep — TODO
 - Stage 7: Apply + land first job — TODO
@@ -29,7 +29,7 @@
 
 ## Stage 4 Detail
 
-Playwright sprint (7 days):
+### Playwright sprint (7 days) — COMPLETE (tag v0.4.0)
 
 - Day 1: Playwright basics — COMPLETE
 - Day 2: Playwright locators — COMPLETE
@@ -39,9 +39,18 @@ Playwright sprint (7 days):
 - Day 6: Fixtures + conftest — COMPLETE
 - Day 7: Review + commit — COMPLETE
 
-After Playwright sprint:
+### API automation sprint (7 days) — COMPLETE (tag v0.5.0)
 
-- TODO: API automation (Python requests deep dive)
+- Day 1: Mock testing with `responses` — COMPLETE
+- Day 2: Authentication + headers — COMPLETE
+- Day 3: Parametrize + error handling — COMPLETE
+- Day 4: Session client + fixtures — COMPLETE
+- Day 5: Retry logic — COMPLETE
+- Day 6: JSON Schema validation — COMPLETE
+- Day 7: Review + release — COMPLETE
+
+### Remaining Stage 4 topics
+
 - TODO: Selenium basics
 - TODO: Load testing (Locust / k6)
 - TODO: Test reporting (Allure)
@@ -77,7 +86,7 @@ After Playwright sprint:
 - eb96664 feat: add Playwright form tests (Stage 4 Day 3)
 
 **CI status:** green (latest run)
-**Tags:** v0.2.0 (Stage 2), v0.3.0 (Stage 3), v0.4.0 (Stage 4 Playwright sprint)
+**Tags:** v0.2.0 (Stage 2), v0.3.0 (Stage 3), v0.4.0 (Playwright), v0.5.0 (API automation)
 
 ---
 
@@ -109,7 +118,7 @@ After Playwright sprint:
 - eb96664 feat: add Playwright form tests (Stage 4 Day 3)
 
 **CI status:** green (latest run)
-**Tags:** v0.2.0 (Stage 2), v0.3.0 (Stage 3), v0.4.0 (Stage 4 Playwright sprint)
+**Tags:** v0.2.0 (Stage 2), v0.3.0 (Stage 3), v0.4.0 (Playwright), v0.5.0 (API automation)
 
 ---
 
@@ -128,32 +137,34 @@ After Playwright sprint:
 
 ## Next Session — Start Here
 
-**Stage 4 Playwright sprint is COMPLETE** (Days 1–7, tag v0.4.0).
+## Stage 4 Detail
 
-**Next sprint choices (pick one when ready):**
+### Playwright sprint (7 days) — COMPLETE (tag v0.4.0)
 
-1. **API automation** — Python requests deep dive
-   - Most valuable for QA job listings
-   - Builds on your existing api_client.py and Postman work
-   - Recommended next
+- Day 1: Playwright basics — COMPLETE
+- Day 2: Playwright locators — COMPLETE
+- Day 3: Forms + inputs — COMPLETE
+- Day 4: Assertions deep dive — COMPLETE
+- Day 5: Page Object Model — COMPLETE
+- Day 6: Fixtures + conftest — COMPLETE
+- Day 7: Review + commit — COMPLETE
 
-2. **Selenium basics** — comparison to Playwright
-   - Many legacy QA teams still use Selenium
-   - Short sprint (~2-3 days)
+### API automation sprint (7 days) — COMPLETE (tag v0.5.0)
 
-3. **Load testing** — Locust or k6
-   - Non-functional testing
-   - Nice to have, not urgent
+- Day 1: Mock testing with `responses` — COMPLETE
+- Day 2: Authentication + headers — COMPLETE
+- Day 3: Parametrize + error handling — COMPLETE
+- Day 4: Session client + fixtures — COMPLETE
+- Day 5: Retry logic — COMPLETE
+- Day 6: JSON Schema validation — COMPLETE
+- Day 7: Review + release — COMPLETE
 
-4. **Test reporting** — Allure
-   - Pretty reports for CI
-   - Short sprint
+### Remaining Stage 4 topics
 
-5. **DSA practice** — LeetCode daily (parallel side track)
-   - Runs alongside any sprint
-   - Not a "block" — always on
-
-**Recommended:** Start API automation sprint, run DSA daily in parallel.
+- TODO: Selenium basics
+- TODO: Load testing (Locust / k6)
+- TODO: Test reporting (Allure)
+- TODO: DSA: LeetCode daily (parallel side track)
 
 ---
 
