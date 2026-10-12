@@ -4,6 +4,7 @@ Demonstrates how to test REST APIs using Python requests library.
 """
 
 import requests
+from urllib3.util.retry import Retry
 
 BASE_URL = "https://jsonplaceholder.typicode.com"
 
@@ -115,12 +116,26 @@ class APIClient:
         base_url: str = BASE_URL,
         token: str | None = None,
         timeout: int = 10,
+        max_retries: int = 3,
     ) -> None:
         self.base_url = base_url
         self.timeout = timeout
         self.session = requests.Session()
+
         if token:
             self.session.headers["Authorization"] = f"Bearer {token}"
+
+        # Retry only on transient errors — NOT on 4xx client errors
+        retry_strategy = Retry(
+            total=max_retries,
+            backoff_factor=0.5,  # 0.5s, 1s, 2s between retries
+            status_forcelist=[500, 502, 503, 504],  # server errors
+            allowed_methods=["GET", "HEAD", "OPTIONS"],  # safe to retry
+            raise_on_status=False,  # let raise_for_status handle it
+        )
+        adapter = requests.adapters.HTTPAdapter(max_retries=retry_strategy)
+        self.session.mount("https://", adapter)
+        self.session.mount("http://", adapter)
 
     def get(self, path: str) -> dict:
         """GET a path (e.g. '/posts/1') and return parsed JSON."""
