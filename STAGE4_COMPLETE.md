@@ -1,12 +1,12 @@
-# Stage 4 Complete — QA Automation (Playwright)
+# Stage 4 Complete — QA Automation Toolkit
 
-**Date:** 2026-09-21
-**Duration:** 7 days
+**Date:** 2026-10-14
+**Duration:** 17 days (3 sprints)
 **Status:** ✅ Complete
 
 ---
 
-## What I Learned
+## Sprint 1 — Playwright (7 days)
 
 ### Day 1 — Playwright Basics
 - Installing Playwright + Chromium
@@ -140,3 +140,65 @@ This is the same tooling used by professional QA teams.
 - DSA: LeetCode problems daily (parallel)
 
 **Then Stage 5 — Portfolio projects**
+
+---
+
+## Sprint 2 — API Automation (7 days)
+
+**Days 1-7 covered:**
+
+- **Day 1:** Mock testing with `responses` — `@responses.activate`, `responses.calls`
+- **Day 2:** Authentication + headers — Bearer, Basic, API key, 401/403
+- **Day 3:** Parametrize + error handling — 3 functions → 18 tests
+- **Day 4:** Session-based `APIClient` + fixtures (`api`, `authed_api`)
+- **Day 5:** Retry logic — `urllib3.Retry` with backoff, 5xx only
+- **Day 6:** JSON Schema validation — `jsonschema`, required fields, types
+- **Day 7:** Review + Tag `v0.5.0`
+
+---
+
+## Sprint 3 — QA Tools (3 days)
+
+### Day 1 — Selenium Basics
+- `driver.get()`, `find_element(By.X)`, `current_url`, `page_source`
+- Explicit waits: `WebDriverWait` + `expected_conditions`
+- System chromedriver (`/usr/bin/chromedriver`)
+- Selenium requires manual waits; Playwright auto-waits
+
+### Day 2 — Load Testing with Locust
+- `HttpUser` + `@task` decorator + task weighting
+- Headless run: `--headless --users 5 --spawn-rate 1 --run-time 20s`
+- **Results:** 42 requests, 0 failures, P50=210ms, P99=770ms
+
+### Day 3 — Test Reporting with Allure
+- Java dependency (`default-jre`) then GitHub download
+- `@allure.feature`, `@allure.story`, `@allure.title`, `@allure.severity`
+- `with allure.step("..."):` for execution steps
+- `allure generate allure-results -o allure-report --clean`
+
+---
+
+## Stage 4 Final Statistics
+
+| Metric | Value |
+|--------|-------|
+| Total days | 17 (3 sprints) |
+| Total tests | 303 |
+| Playwright tests | 52 |
+| Selenium tests | 5 |
+| API tests | 55 |
+| Load test tasks | 3 |
+| Allure demo tests | 2 |
+| Page objects | 4 |
+| Tags | v0.4.0, v0.5.0, v0.6.0 |
+
+---
+
+## Full QA Toolkit
+
+- **UI:** Playwright (advanced) + Selenium (basics)
+- **API:** mocking, auth, retry, schema validation
+- **Performance:** Locust load testing
+- **Reporting:** Allure HTML reports
+- **Architecture:** POM, fixtures, strict typing
+- **CI:** 303 tests on every push
