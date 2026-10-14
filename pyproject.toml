@@ -21,6 +21,7 @@ dev = [
     "responses>=0.25",
     "jsonschema>=4.20",
     "locust>=2.40",
+    "allure-pytest>=2.13",
 ]
 
 
