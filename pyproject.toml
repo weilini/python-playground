@@ -20,6 +20,7 @@ dev = [
     "pytest-playwright>=0.5",
     "responses>=0.25",
     "jsonschema>=4.20",
+    "locust>=2.40",
 ]
 
 
