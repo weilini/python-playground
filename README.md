@@ -8,14 +8,10 @@ A personal learning repository documenting my transition from **IT Support** int
 
 ## About This Project
 
-After 7+ years in IT support, system administration, and software QA, I decided to make a deliberate career transition into software engineering. This repository is my learning log — every commit, every test, and every note reflects that journey.
+This repository is a hands-on software engineering portfolio project built to production standards: layered automated tests, continuous integration, static analysis, and clear documentation. Every module has tests, every change goes through CI, and every design decision is documented.
 
-**My path:**
-- **Background:** IT Support, System Administration, SQL DBA
-- **Current focus:** QA Engineering (ISTQB CTFL in progress)
-- **Long-term goal:** Software Engineering / Platform Engineering
-
-I'm not just learning — I'm building. Every module has tests. Every change goes through CI. Every lesson is documented.
+Current focus: Software Engineering / Platform Engineering
+Long-term goal: Continuously building my knowledge and skills, and growing this GitHub portfolio with real, working projects
 
 ---
 
