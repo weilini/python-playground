@@ -2,7 +2,7 @@
 
 ![Tests](https://github.com/weilini/python-playground/actions/workflows/tests.yml/badge.svg)
 
-A personal learning repository documenting my transition from **IT Support** into **QA Engineering** and **Software Engineering**.
+A hands-on software engineering portfolio project demonstrating production-ready QA and backend development practices.
 
 ---
 
