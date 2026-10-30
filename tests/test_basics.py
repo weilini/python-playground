@@ -21,6 +21,15 @@ class TestCelsiusToFahrenheit:
     def test_room_temperature(self):
         assert celsius_to_fahrenheit(20) == 68.0
 
+    def test_extreme_temperature(self):
+        # 测试极端边界值（比如绝对零度附近）
+        assert celsius_to_fahrenheit(-273.15) == -459.67
+
+    def test_raises_type_error_on_string(self):
+        # 测试异常输入：如果传了字符串而不是数字，应该报错
+        with pytest.raises(TypeError):
+            celsius_to_fahrenheit("not a number")
+
 
 class TestCalculateAge:
     """Tests for calculate_age()."""
