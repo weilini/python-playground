@@ -1,6 +1,7 @@
 # Python Playground
 
 ![Tests](https://github.com/weilini/python-playground/actions/workflows/tests.yml/badge.svg)
+![Coverage](https://img.shields.io/badge/coverage-63%25-green)
 
 A hands-on software engineering portfolio project demonstrating production-ready QA and backend development practices.
 
@@ -10,7 +11,7 @@ A hands-on software engineering portfolio project demonstrating production-ready
 
 This repository is a software engineering portfolio project built to production standards: layered automated tests, continuous integration, static analysis, and clear documentation. Every module has tests, every change goes through CI, and every design decision is documented.
 
-**Current focus:** Software Engineering / Platform Engineering  
+**Current focus:** Software Engineering / Platform Engineering
 **Long-term goal:** Continuously building my knowledge and skills, and growing this GitHub portfolio with real, working projects.
 
 ---
@@ -33,7 +34,16 @@ The codebase is organized by purpose to separate application logic, UI testing, 
 - **`dsa_practice/`** — Ongoing Data Structures & Algorithms practice (LeetCode).
 
 ---
+## Testing Architecture
 
+```text
+       [ UI Layer (Playwright) ]  --> E2E browser tests (Page Object Model)
+                  |
+                  v
+       [ API Layer (requests)  ]  --> Integration tests (Mocking, Schemas, Auth)
+                  |
+                  v
+       [ Unit Layer (pytest)   ]  --> Pure function & logic tests (Fixtures)
 ## Tech Stack
 
 - **Language:** Python 3.12
