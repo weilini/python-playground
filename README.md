@@ -1,6 +1,7 @@
 # Python Playground
 
 ### 🌐 [Click here to view the Live Allure Test Report](https://weilini.github.io/python-playground/)
+
 ![Tests](https://github.com/weilini/python-playground/actions/workflows/tests.yml/badge.svg)
 ![Coverage](https://img.shields.io/badge/coverage-63%25-green)
 
@@ -27,7 +28,7 @@ The codebase is organized by purpose to separate application logic, UI testing, 
 - **`tests/`** — 296 automated tests across three layers.
   - **API Tests:** 55 tests using `responses` for mocking.
   - **E2E Tests:** 52 Playwright UI tests.
-  - **Unit Tests:** 64% code coverage.
+  - **Unit Tests:** 63% code coverage.
   - Uses `pytest` with fixtures, parametrization, and mocking.
 - **`docs/`** — Engineering and QA documentation.
   - Includes Playwright POM patterns, API testing guides, and ISTQB CTFL study notes.
@@ -35,6 +36,7 @@ The codebase is organized by purpose to separate application logic, UI testing, 
 - **`dsa_practice/`** — Ongoing Data Structures & Algorithms practice (LeetCode).
 
 ---
+
 ## Testing Architecture
 
 ```text
@@ -45,31 +47,3 @@ The codebase is organized by purpose to separate application logic, UI testing, 
                   |
                   v
        [ Unit Layer (pytest)   ]  --> Pure function & logic tests (Fixtures)
-## Tech Stack
-
-- **Language:** Python 3.12
-- **Testing:** pytest, pytest-cov, responses (mock), jsonschema (validation), Playwright (UI)
-- **Code Quality:** Black (formatting), Ruff (linting), mypy (type checking), pre-commit hooks
-- **CI/CD:** GitHub Actions (runs on Python 3.11 and 3.12)
-- **Tools:** Git, Linux (Ubuntu), VS Code, Postman
-
----
-
-## Setup & Installation
-
-To run this project locally:
-
-```bash
-# 1. Clone the repository
-git clone git@github.com:weilini/python-playground.git
-cd python-playground
-
-# 2. Create and activate a virtual environment
-python3 -m venv .venv
-source .venv/bin/activate
-
-# 3. Install dependencies
-pip install -e ".[dev]"
-
-# 4. Run the test suite
-pytest
