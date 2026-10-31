@@ -23,7 +23,8 @@ class TestCelsiusToFahrenheit:
 
     def test_extreme_temperature(self):
         # 测试极端边界值（比如绝对零度附近）
-        assert celsius_to_fahrenheit(-273.15) == -459.67
+        # 使用 pytest.approx 来处理浮点数计算时的微小精度误差
+        assert celsius_to_fahrenheit(-273.15) == pytest.approx(-459.67)
 
     def test_raises_type_error_on_string(self):
         # 测试异常输入：如果传了字符串而不是数字，应该报错
