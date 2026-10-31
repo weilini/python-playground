@@ -1,5 +1,6 @@
 # Python Playground
 
+### 🌐 [Click here to view the Live Allure Test Report](https://weilini.github.io/python-playground/)
 ![Tests](https://github.com/weilini/python-playground/actions/workflows/tests.yml/badge.svg)
 ![Coverage](https://img.shields.io/badge/coverage-63%25-green)
 
